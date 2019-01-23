@@ -1,4 +1,4 @@
-# Cyberball Physiological Analysis Code
+# Physiological Analysis Code
 
 # This code was created by Sam Ashcroft to import, clean, manipulate and summarise over 80 million rows of physiological data
 # The 5.5 million rows of data are summarised in a 60 x 26 cell Excel sheet as output
@@ -15,7 +15,7 @@ library(psych)
 library(Publish)
 
 # setwd to your raw data folder ready for importing
-setwd("~/Documents/PhD Resources/R/Cyberball/Cyberball Analysis/Raw")
+setwd("~/Documents/File_Path...")
 
 # list all files ending in .txt
 df_name <- list.files(pattern = "\\.txt$")
@@ -58,7 +58,7 @@ str(df)
 summary(df)
 
 # set wd to folder containing all the pings that mark each important event during physiological recording
-setwd("~/Documents/PhD Resources/R/Cyberball/Cyberball Analysis/Pings")
+setwd("~/Documents/File_Path...")
 
 # find pings file
 pings_file <- list.files(pattern = "\\.csv$")
@@ -81,7 +81,7 @@ str(pings_and_phys)
 summary(pings_and_phys)
 
 # set dir to output for writing a csv later
-setwd("~/Documents/PhD Resources/R/Cyberball/Cyberball Analysis/Output")
+setwd("~/Documents/File_Path...")
 
 # begin extracting mins, maxs, means, sds
 
@@ -204,7 +204,7 @@ full_df <- baseline_CH1_min %>%
 
 
 # write a csv of the full dataframe
-write.csv(full_df, "Cyberball Phys Data Summarised.csv")
+write.csv(full_df, "Name-of-File.csv")
 
 # play a sound to let me know it's done (takes a few minutes given how much data there is)
 beep(3)
